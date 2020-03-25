@@ -1,0 +1,33 @@
+
+.display-block {
+    display: block;
+    background-color:rgb(51, 51 , 51, 0.7);
+    padding-bottom: 50px;;
+  }
+.display-none {
+    display: none;
+  }
+
+#Restaurant{
+  position: relative;
+  margin-left: 4%;
+}
+#Dishes{
+  margin-bottom: 3%;
+  margin-left:0.5%;
+  margin-top:35%;
+}
+
+#Reviews{
+  margin-top: 18%;
+  margin-left: 3%;
+}
+
+#modal-root{
+  position: relative;
+  z-index: 999;
+}
+
+#Photos{
+  /* margin-top:10%; */
+}
