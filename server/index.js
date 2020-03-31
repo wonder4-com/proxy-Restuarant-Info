@@ -1,5 +1,4 @@
 const express = require('express')
-
 const httpProxy = require('http-proxy');
 const cors = require('cors');
 const path = require('path');
@@ -19,62 +18,42 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 app.all('/currentRestaurant',(req, res) => {
     // info server
-    proxy.web(req, res, { target: 'http://localhost:8000' });
+    proxy.web(req, res, { target: 'http://ec2-3-15-157-241.us-east-2.compute.amazonaws.com' });
   });
 
 app.all('/restaurant',(req, res) => {
     // info server
-    proxy.web(req, res, { target: 'http://localhost:8000' });
+    proxy.web(req, res, { target: 'http://ec2-3-15-157-241.us-east-2.compute.amazonaws.com' });
   });
 
 
 
-// app.all('/getCompany', (req, res) => {
-//     proxy.web(req, res, { target: 'http://localhost:3000' });
-// })
-
-// app.all('/getItems', (req, res) => {
-//     proxy.web(req, res, { target: 'http://localhost:3000' });
-// });
-
-// app.all('/getPhotos', (req, res) => {
-//     proxy.web(req, res, { target: 'http://localhost:3000' });
-// })
-
-// app.all('/arrow.png', (req, res) => {
-//     res.sendFile('/Users/michellelao/Desktop/FECproject/popular-dishes/server/arrow.png');
-// });
-
-// app.all('/leftarrow.png', (req, res) => {
-//     res.sendFile('/Users/michellelao/Desktop/FECproject/popular-dishes/server/leftarrow.png');
-// });
-
 app.all('/popularDishes/*', (req, res) => {
-    proxy.web(req, res, { target: 'http://localhost:3000' });
+    proxy.web(req, res, { target: 'http://ec2-54-241-229-137.us-west-1.compute.amazonaws.com' });
 })
 
 app.all('/api/reviews', (req, res) => {
-    proxy.web(req, res, { target: 'http://localhost:3003' });    
+    proxy.web(req, res, { target: 'http://ec2-13-57-201-62.us-west-1.compute.amazonaws.com/' });    
 });
   
   app.all('/api/restaurant/:id', (req, res) => {
-    proxy.web(req, res, { target: 'http://localhost:3003' });        
+    proxy.web(req, res, { target: 'http://ec2-13-57-201-62.us-west-1.compute.amazonaws.com/' });        
   });
   
   app.all('/api/restaurants/:id/reviews', (req, res) => {
-    proxy.web(req, res, { target: 'http://localhost:3003' });    
+    proxy.web(req, res, { target: 'http://ec2-13-57-201-62.us-west-1.compute.amazonaws.com/' });    
   });
   
   app.all('/api/restaurants/:id/newreview', (req, res) => {
-    proxy.web(req, res, { target: 'http://localhost:3003' });    
+    proxy.web(req, res, { target: 'http://ec2-13-57-201-62.us-west-1.compute.amazonaws.com/' });    
   });
 
   app.all('/seeAllPhotos', (req, res) => {
-    proxy.web(req, res, { target: 'http://localhost:3004' });    
+    proxy.web(req, res, { target: 'http://ec2-18-144-154-4.us-west-1.compute.amazonaws.com' });    
   });
     
   app.all('/seeAllPhotos/:photoId', (req, res) => {
-    proxy.web(req, res, { target: 'http://localhost:3004' });    
+    proxy.web(req, res, { target: 'http://ec2-18-144-154-4.us-west-1.compute.amazonaws.com' });    
   });
   
 
