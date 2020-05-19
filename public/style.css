@@ -10,18 +10,20 @@
 
 #Restaurant{
 position: relative;
-margin-left: 8.5%;
+margin-left: 7%;
 margin-top:4%
 }
 #Dishes{
-margin-bottom: 3%;
-margin-left:5%;
-margin-top:38%;
+  position: relative;
+margin-bottom: 20%;
+margin-left:3.6%;
+margin-top:3%;
 }
 
 #Reviews{
-margin-top: 20%;
-margin-left: 7.5%;
+  position: relative;
+margin-top: 4%;
+margin-left: 6.0%;
 }
 
 #modal-root{
